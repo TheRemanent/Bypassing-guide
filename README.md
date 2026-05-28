@@ -23,8 +23,7 @@ Ayudar a usuarios nuevos (y no tan nuevos) a entender cómo funcionan estas herr
 ⏳ Más guías serán añadidas pronto
 
 ## Cómo ver la guía
-
-- Abre el archivo `index.html`, o  
+ 
 - Si GitHub Pages está activado, entra al enlace público del proyecto.
 - https://theremanent.github.io/Bypassing-guide/
 
