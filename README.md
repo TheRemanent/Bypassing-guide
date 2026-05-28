@@ -26,6 +26,7 @@ Ayudar a usuarios nuevos (y no tan nuevos) a entender cómo funcionan estas herr
 
 - Abre el archivo `index.html`, o  
 - Si GitHub Pages está activado, entra al enlace público del proyecto.
+- https://theremanent.github.io/Bypassing-guide/
 
 ## Autor
 
