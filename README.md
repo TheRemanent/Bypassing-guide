@@ -12,7 +12,7 @@ También incluye una versión completa de la guía en **español** y **inglés**
 👉 https://theremanent.github.io/Bypassing-guide/guia-fix-bypass-crack.html
 
 ### 🇬🇧 Guide in English  
-👉 https://theremanent.github.io/Bypassing-guide/guide-fix-bypass-crack-en.html
+👉 https://theremanent.github.io/Bypassing-guide/guide-fix-bypass-crack.html
 
 ---
 
