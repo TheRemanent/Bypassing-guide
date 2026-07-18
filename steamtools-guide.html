@@ -1,0 +1,199 @@
+SteamTools User Guide [wiki]
+
+Preface
+This article will help you quickly master Steam Tools, from basic to advanced applications. The content has been organized for easy reference.
+
+1. Basic concepts
+
+What is SteamDB?
+SteamDB is an unofficial third-party website used to track and analyze game and app data on the Steam platform. It offers detailed statistics and analysis features to help users understand various information and historical changes in games and software.
+
+SteamDB
+- Definition: An unofficial third-party website used to track and analyze game and app data on the Steam platform.
+
+AppID
+- Definition: A unique identifier for each Steam game or application.
+- Purpose: Used to identify and manage specific games or software.
+
+Build ID
+- Definition: A specific identifier for the build version of a game or application.
+- Purpose: Allows users to track updates or patches in specific versions and stay informed about changes and improvements in each update.
+
+Manifest ID
+- Definition: Used to identify a specific version of a file or content.
+- Purpose: Helps manage and distribute game resources. By comparing different versions of Manifest IDs, users can track file changes and ensure consistency and version control.
+
+Manifest File
+- Definition: The manifest file contains the paths and size information of all files in the game, ensuring file integrity and consistency.
+- Naming conventions: for example, {depotid}_{manifestId}.manifest
+- Storage location: usually stored in C:\Program Files (x86)\Steam\depotcache
+
+Decryption Key
+- Definition: The decryption key is an important tool used to decrypt manifest files. Without this key, even if you have the checklist file, you won't be able to download or access game content.
+
+Decrypt key locations
+The decryption key is usually stored in the Steam configuration file, with the following path: C:\Program Files (x86)\Steam\config\config.vdf
+
+2. How to obtain the listing file and decryption key
+1. Legally purchase games
+2. Family sharing
+3. Borrowing a friend's account
+4. Use a shared account (offline account)
+
+3. Download SteamTools
+Official link: https://www.steamtools.net/
+
+4. Set the display language
+
+5. Uninstall SteamTools
+Uninstall via Windows search
+In the Windows search bar, type "SteamTools" and click on the "Uninstall SteamTools" uninstaller that appears.
+
+Manually delete the related files
+Go to the root directory of Steam installation and delete the following files:
+- Steam\hid.dll
+- Steam\XInput1_4.dll
+- Steam\dwmapi.dll
+- Steam\config\stplug-in Folder
+- Steam\config\depotcache Folder
+- Steam\appcache\httpcache Folder
+These files will be permanently deleted, completing the Steam Tools uninstall.
+Source: ResetSteam tutorial
+
+6. Features and uses of SteamTools
+
+- Safer download of pure game files from Steam: Make sure you download unmodified and secure game files directly from Steam.
+- Automatic Update Management: Easily and automatically manage game updates and patches.
+- Cloud Save Support: Use Steam's cloud save feature to store and sync your game progress across multiple devices.
+- Friend interaction features: Enhance your interaction with friends through in-app messaging and game invitations.
+- Unlock games and DLC you don't own: Access and unlock games and downloadable content (DLC) you don't own.
+- Authorize and decrypt games for other accounts: Share encrypted games with other Steam accounts and grant them access.
+- Use Steam Cloud Saves for games you don't own: Use Steam Cloud Save for games you don't own yet, so you can sync progress across devices.
+- Unlock Achievements (Save Locally): Unlock in-game achievements, although these are saved locally and will not sync with your Steam profile.
+- Unlock home monitoring and PIN access: gain access to Steam's home monitoring and PIN system to control what family members can access.
+- Bypassing family sharing restrictions: Break through the limitations of family sharing and access shared content in an unrestricted way.
+- Unlock region-locked games: unlock games that are region-restricted and not available in your area.
+
+7. Preparations before use
+
+1. Use the latest version of the Steam client.
+2. Avoid running SteamTools as administrator (this will prevent you from dragging files in).
+3. Add SteamTools to the whitelist of Windows Defender and antivirus.
+4. Make sure the Steam version is stable, not beta.
+5. In the launch Steam options, check: Unlock mode, Always unlock, and Start with Steam.
+6. Uncheck: Disable game updates.
+7. Check if Steam Tools is available.
+
+8. Methods for unlocking and downloading content in games
+Unlocking method (recommended order from simple to tradition):
+
+- Fully automatic
+- Semi-automatic (this method is outdated)
+- Semi-automatic (personal recommendation)
+- Semi-manual
+- Manual (not recommended)
+- Pure manual (not recommended)
+
+Fully automatic (no longer active)
+Just enter your AppID—no need to manually look up Lua or Manifest files.
+Cloud Unlock (official paid service): Automatically updates Manifest files while online, always up to date, recommended for users who appreciate convenience.
+
+Semi-fully automatic
+Rely on third-party tools (list downloaders).
+- SteamManifestCache by pjy612
+- OneKey by ikunshare last free version v1.5.1
+
+Semi-automatic
+Download ready-made Lua/ST files and their corresponding Manifest files from forums or communities. Drag them into the floating window, then restart Steam.
+- SteamLua - Official SteamTools production (paid fees apply)
+- 3A Forum Game Sharing
+
+Semi-manual
+You can drag and drop the App ID or link it to the floating window to unlock it. Note that Steam Tools only unlocks features and does not download content.
+
+Manual & Pure manual
+Manually write Lua and obtain keys, or simply add keys manually in config.vdf
+
+Lua encoding instructions:
+
+--- 解锁App/Depot
+--- addappid(appid/depotid, flag, key)
+function addappid(appid, flag, key) end
+
+addappid(500)
+addappid(500,1,"500 的 DecryptionKey")
+
+addappid(501,0,"501 的 DecryptionKey")
+
+--- 固定清单版本
+--- setManifestid(depotid, manifestId)
+function setManifestid(depotid, manifestId) end
+
+setManifestid(3764201,"5691830764668778509")
+
+9. Lua & Manifest file sources
+- 3a官方论坛-游戏分享版块
+- ManifestHub - GitHub (开源清单库)
+
+10. Fixed List Configuration Explanation (No longer valid in the new version of Steam Tools)
+setManifest(DepotID, "ManifestID")
+
+11. Lua & Manifest extraction tools
+- Steam入库插件提取工具
+- 清单提取器1.1 by B-I-A-O
+
+12. How to disable game unlock and download functions
+- Way 1: Hold Ctrl key, drag AppId or Lua file into floating window, then restart Steam.
+- Way 2: Manually delete related AppID plugin files in Steam\config\stplug-in
+
+13. Methods for deleting manifest files
+Manifest files are stored in Steam\config\depotcache and Steam\depotcache
+14. Check the current game version and confirm it is up to date
+What are Manifest ID and Build ID?
+- Manifest ID: Represents the detailed version of game files.
+- Build ID: Represents the build version of the game.
+
+How to view Build ID on SteamDB:
+1. Go to SteamDB.info
+2. Search the game
+3. Click "Patches" tab
+4. Latest Build ID is at the top.
+
+15. How to update the game version
+- Fully automatic updates (recommended)
+- Semi-automatic updates
+- Semi-manual updates
+- Manual updates
+- Pure manual updates
+
+16. About achievements
+- Steam official achievement files (UserGameStatsSchema_{appid}.bin)
+- SteamTools achievement files (UserStats_{appid}_{user_friend_code}.bin)
+- Achievement modifier: SteamAchievementManager (SAM) or Watt Toolkit
+
+17. Denuvo Crypto Game Guide (D Crypto)
+Three types of encryption.
+Common error codes: 85500000, 85500005, 85500006
+Authorization steps using SteamTools.
+
+18. How to Download Workshop Files
+
+19. How to play online on unsupported games
+- online-fix.me Online Patch (Highly Recommended)
+- Goldberg Steam emulator
+
+20. How to unlock DLC
+Two types of DLC.
+Methods: Automatic, Semi-automatic, Manual.
+
+SteamTools FAQ
+- Safety-related
+- Download and Installation
+- Startup and Operation
+- Multiplayer (online) related
+- Operation-related
+
+Others
+Practical tool recommendations: Watt Toolkit (Steam++)
+
+Recommended Game Assistance Websites: Fengling Yueying, CrackWatcher, NexusMods, FearLess Cheat Engine.
