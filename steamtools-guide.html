@@ -1,199 +1,874 @@
-SteamTools User Guide [wiki]
+<div class="section-title">📘 SteamTools User Guide — Preface</div>
 
-Preface
-This article will help you quickly master Steam Tools, from basic to advanced applications. The content has been organized for easy reference.
+<div class="box">
+    <strong>Preface 📖</strong><br><br>
+    This article will help you quickly master Steam Tools, from basic to advanced applications.  
+    The content has been organized for easy reference.
+</div>
 
-1. Basic concepts
+<div class="section-title">🔧 1. Basic Concepts</div>
 
-What is SteamDB?
-SteamDB is an unofficial third-party website used to track and analyze game and app data on the Steam platform. It offers detailed statistics and analysis features to help users understand various information and historical changes in games and software.
+<div class="sub-title">🌐 SteamDB</div>
+<div class="box">
+    <strong>Definition:</strong> SteamDB is an unofficial third-party website used to track and analyze game and app data on the Steam platform.<br><br>
+    <strong>Purpose:</strong> It offers detailed statistics and analysis features to help users understand various information and historical changes in games and software.
+</div>
 
-SteamDB
-- Definition: An unofficial third-party website used to track and analyze game and app data on the Steam platform.
+<div class="sub-title">🆔 AppID</div>
+<div class="box">
+    <strong>Definition:</strong> A unique identifier for each Steam game or application.<br><br>
+    <strong>Purpose:</strong> Used to identify and manage specific games or software.
+</div>
 
-AppID
-- Definition: A unique identifier for each Steam game or application.
-- Purpose: Used to identify and manage specific games or software.
+<div class="sub-title">🏗️ Build ID</div>
+<div class="box">
+    <strong>Definition:</strong> A specific identifier for the build version of a game or application.<br><br>
+    <strong>Purpose:</strong> Allows users to track updates or patches in specific versions and stay informed about changes and improvements in each update.
+</div>
 
-Build ID
-- Definition: A specific identifier for the build version of a game or application.
-- Purpose: Allows users to track updates or patches in specific versions and stay informed about changes and improvements in each update.
+<div class="sub-title">🧾 Manifest ID</div>
+<div class="box">
+    <strong>Definition:</strong> Used to identify a specific version of a file or content.<br><br>
+    <strong>Purpose:</strong> Helps manage and distribute game resources.  
+    By comparing different versions of Manifest IDs, users can track file changes and ensure consistency and version control.
+</div>
 
-Manifest ID
-- Definition: Used to identify a specific version of a file or content.
-- Purpose: Helps manage and distribute game resources. By comparing different versions of Manifest IDs, users can track file changes and ensure consistency and version control.
+<div class="sub-title">📂 Manifest File</div>
+<div class="box">
+    <strong>Definition:</strong> The manifest file contains the paths and size information of all files in the game, ensuring file integrity and consistency.<br><br>
 
-Manifest File
-- Definition: The manifest file contains the paths and size information of all files in the game, ensuring file integrity and consistency.
-- Naming conventions: for example, {depotid}_{manifestId}.manifest
-- Storage location: usually stored in C:\Program Files (x86)\Steam\depotcache
+    <strong>Naming conventions:</strong><br>
+    <code>{depotid}_{manifestId}.manifest</code><br><br>
 
-Decryption Key
-- Definition: The decryption key is an important tool used to decrypt manifest files. Without this key, even if you have the checklist file, you won't be able to download or access game content.
+    <strong>Storage location:</strong><br>
+    Usually stored in the Steam installation directory:<br>
+    <code>C:\Program Files (x86)\Steam\depotcache</code>
+</div>
 
-Decrypt key locations
-The decryption key is usually stored in the Steam configuration file, with the following path: C:\Program Files (x86)\Steam\config\config.vdf
+<div class="sub-title">🔑 Decryption Key</div>
+<div class="box">
+    <strong>Definition:</strong> The decryption key is an important tool used to decrypt manifest files.  
+    Without this key, even if you have the checklist file, you won't be able to download or access game content.<br><br>
 
-2. How to obtain the listing file and decryption key
-1. Legally purchase games
-2. Family sharing
-3. Borrowing a friend's account
-4. Use a shared account (offline account)
+    <strong>Metaphor:</strong>  
+    It's like borrowing a book at a library — you need the librarian's approval (decryption key).  
+    Even if you know where the book is (the list file), you can't take it without the librarian's approval.
+</div>
 
-3. Download SteamTools
-Official link: https://www.steamtools.net/
+<div class="sub-title">📁 Decrypt Key Locations</div>
+<div class="box">
+    The decryption key is usually stored in the Steam configuration file:<br>
+    <code>C:\Program Files (x86)\Steam\config\config.vdf</code><br><br>
+    Through this path, you can find the relevant configuration files and obtain the decryption key.
+</div>
+<div class="section-title">📥 2. How to Obtain the Listing File and Decryption Key</div>
 
-4. Set the display language
+<div class="sub-title">💳 2.1 Legally Purchase Games</div>
+<div class="box">
+    When you legally purchase a game from the Steam store, Steam will automatically provide  
+    the required checklist file and decryption key.  
+    <br><br>
+    <strong>✔ Includes:</strong><br>
+    – Listing file<br>
+    – Decryption key<br><br>
+    🛒🎮
+</div>
 
-5. Uninstall SteamTools
-Uninstall via Windows search
-In the Windows search bar, type "SteamTools" and click on the "Uninstall SteamTools" uninstaller that appears.
+<div class="sub-title">🏠 2.2 Family Sharing</div>
+<div class="box">
+    Access your friends' or family members' game libraries through the Family Sharing feature,  
+    and download the required checklist files and decryption keys.<br><br>
 
-Manually delete the related files
-Go to the root directory of Steam installation and delete the following files:
-- Steam\hid.dll
-- Steam\XInput1_4.dll
-- Steam\dwmapi.dll
-- Steam\config\stplug-in Folder
-- Steam\config\depotcache Folder
-- Steam\appcache\httpcache Folder
-These files will be permanently deleted, completing the Steam Tools uninstall.
-Source: ResetSteam tutorial
+    <strong>Steps:</strong><br>
+    – Go to <em>Steam Settings → Home → Authorize Shared Computer</em><br>
+    – Select the family members you want to share<br><br>
+    📱👥
+</div>
 
-6. Features and uses of SteamTools
+<div class="sub-title">👤 2.3 Borrowing a Friend's Account</div>
+<div class="box">
+    After obtaining permission from friends, you can log in to Steam using their accounts.  
+    Make sure you have obtained consent and always pay attention to account security and legitimacy.<br><br>
+    🔑🤝
+</div>
 
-- Safer download of pure game files from Steam: Make sure you download unmodified and secure game files directly from Steam.
-- Automatic Update Management: Easily and automatically manage game updates and patches.
-- Cloud Save Support: Use Steam's cloud save feature to store and sync your game progress across multiple devices.
-- Friend interaction features: Enhance your interaction with friends through in-app messaging and game invitations.
-- Unlock games and DLC you don't own: Access and unlock games and downloadable content (DLC) you don't own.
-- Authorize and decrypt games for other accounts: Share encrypted games with other Steam accounts and grant them access.
-- Use Steam Cloud Saves for games you don't own: Use Steam Cloud Save for games you don't own yet, so you can sync progress across devices.
-- Unlock Achievements (Save Locally): Unlock in-game achievements, although these are saved locally and will not sync with your Steam profile.
-- Unlock home monitoring and PIN access: gain access to Steam's home monitoring and PIN system to control what family members can access.
-- Bypassing family sharing restrictions: Break through the limitations of family sharing and access shared content in an unrestricted way.
-- Unlock region-locked games: unlock games that are region-restricted and not available in your area.
+<div class="sub-title">📚 2.4 Use a Shared Account (Offline Account)</div>
+<div class="box">
+    By sharing Steam accounts, multiple users can access the game library on it.  
+    In some cases, this shared account is referred to as an “offline account” because  
+    multiple users use the same account offline to avoid conflicts.<br><br>
+    👤💻
+</div>
 
-7. Preparations before use
+<!-- ======================= DOWNLOAD STEAMTOOLS ======================= -->
 
-1. Use the latest version of the Steam client.
-2. Avoid running SteamTools as administrator (this will prevent you from dragging files in).
-3. Add SteamTools to the whitelist of Windows Defender and antivirus.
-4. Make sure the Steam version is stable, not beta.
-5. In the launch Steam options, check: Unlock mode, Always unlock, and Start with Steam.
-6. Uncheck: Disable game updates.
-7. Check if Steam Tools is available.
+<div class="section-title">⬇️ 3. Download SteamTools</div>
+<div class="box">
+    <strong>Official download link:</strong><br>
+    <a href="https://www.steamtools.net/" target="_blank">https://www.steamtools.net/</a>
+</div>
 
-8. Methods for unlocking and downloading content in games
-Unlocking method (recommended order from simple to tradition):
+<!-- ======================= SET DISPLAY LANGUAGE ======================= -->
 
-- Fully automatic
-- Semi-automatic (this method is outdated)
-- Semi-automatic (personal recommendation)
-- Semi-manual
-- Manual (not recommended)
-- Pure manual (not recommended)
+<div class="section-title">🌐 4. Set the Display Language</div>
 
-Fully automatic (no longer active)
-Just enter your AppID—no need to manually look up Lua or Manifest files.
-Cloud Unlock (official paid service): Automatically updates Manifest files while online, always up to date, recommended for users who appreciate convenience.
+<div class="step-box">
+    <strong>Step 1:</strong> Find the SteamTools icon at the bottom right of the taskbar. 💻
+</div>
 
-Semi-fully automatic
-Rely on third-party tools (list downloaders).
-- SteamManifestCache by pjy612
-- OneKey by ikunshare last free version v1.5.1
+<div class="step-box">
+    <strong>Step 2:</strong> Right-click the SteamTools icon to open the shortcut menu. 🖱️
+</div>
 
-Semi-automatic
-Download ready-made Lua/ST files and their corresponding Manifest files from forums or communities. Drag them into the floating window, then restart Steam.
-- SteamLua - Official SteamTools production (paid fees apply)
-- 3A Forum Game Sharing
+<div class="step-box">
+    <strong>Step 3:</strong> Select “Display Language” from the menu. 🗣️
+</div>
 
-Semi-manual
-You can drag and drop the App ID or link it to the floating window to unlock it. Note that Steam Tools only unlocks features and does not download content.
+<div class="step-box">
+    <strong>Step 4:</strong> Choose your desired language (Simplified Chinese, Traditional Chinese, English, etc.). 🌍
+</div>
+<div class="section-title">🗑️ 5. Uninstall SteamTools</div>
 
-Manual & Pure manual
-Manually write Lua and obtain keys, or simply add keys manually in config.vdf
+<div class="sub-title">🔍 5.1 Uninstall via Windows Search</div>
+<div class="box">
+    In the Windows search bar, type <strong>"SteamTools"</strong> and click on the  
+    <em>"Uninstall SteamTools"</em> uninstaller that appears. 🖱️
+</div>
 
-Lua encoding instructions:
+<div class="sub-title">🧹 5.2 Manually Delete Related Files</div>
+<div class="box">
+    Go to the root directory of your Steam installation and delete the following files:<br><br>
 
---- 解锁App/Depot
---- addappid(appid/depotid, flag, key)
-function addappid(appid, flag, key) end
+    <code>Steam\hid.dll</code> 🗑️ <br>
+    <code>Steam\XInput1_4.dll</code> 🗑️ <br>
+    <code>Steam\dwmapi.dll</code> 🗑️ <br>
+    <code>Steam\config\stplug-in</code> 📁 <br>
+    <code>Steam\config\depotcache</code> 📁 <br>
+    <code>Steam\appcache\httpcache</code> 📁 <br><br>
 
-addappid(500)
-addappid(500,1,"500 的 DecryptionKey")
+    These files will be permanently deleted, completing the SteamTools uninstall.<br><br>
+    <strong>Source:</strong> ResetSteam tutorial 📚
+</div>
 
-addappid(501,0,"501 的 DecryptionKey")
+<!-- ======================= FEATURES ======================= -->
 
---- 固定清单版本
---- setManifestid(depotid, manifestId)
-function setManifestid(depotid, manifestId) end
+<div class="section-title">✨ 6. Features and Uses of SteamTools</div>
 
-setManifestid(3764201,"5691830764668778509")
+<div class="box">
+    ✔ <strong>Safer download of pure game files from Steam:</strong>  
+    Ensures you download unmodified and secure game files directly from Steam.
+</div>
 
-9. Lua & Manifest file sources
-- 3a官方论坛-游戏分享版块
-- ManifestHub - GitHub (开源清单库)
+<div class="box">
+    ♻️ <strong>Automatic Update Management:</strong>  
+    Easily and automatically manage game updates and patches.
+</div>
 
-10. Fixed List Configuration Explanation (No longer valid in the new version of Steam Tools)
-setManifest(DepotID, "ManifestID")
+<div class="box">
+    📦 <strong>Cloud Save Support:</strong>  
+    Use Steam's cloud save feature to store and sync your game progress across multiple devices.
+</div>
 
-11. Lua & Manifest extraction tools
-- Steam入库插件提取工具
-- 清单提取器1.1 by B-I-A-O
+<div class="box">
+    👥 <strong>Friend Interaction Features:</strong>  
+    Enhance your interaction with friends through in-app messaging and game invitations.
+</div>
 
-12. How to disable game unlock and download functions
-- Way 1: Hold Ctrl key, drag AppId or Lua file into floating window, then restart Steam.
-- Way 2: Manually delete related AppID plugin files in Steam\config\stplug-in
+<div class="box">
+    🔓 <strong>Unlock games and DLC you don't own:</strong>  
+    Access and unlock games and downloadable content (DLC) you don't own.
+</div>
 
-13. Methods for deleting manifest files
-Manifest files are stored in Steam\config\depotcache and Steam\depotcache
-14. Check the current game version and confirm it is up to date
-What are Manifest ID and Build ID?
-- Manifest ID: Represents the detailed version of game files.
-- Build ID: Represents the build version of the game.
+<div class="box">
+    ♻️ <strong>Authorize and decrypt games for other accounts:</strong>  
+    Share encrypted games with other Steam accounts and grant them access.
+</div>
 
-How to view Build ID on SteamDB:
-1. Go to SteamDB.info
-2. Search the game
-3. Click "Patches" tab
-4. Latest Build ID is at the top.
+<div class="box">
+    ☁️ <strong>Use Steam Cloud Saves for games you don't own:</strong>  
+    Sync progress across devices even for games you don't own yet.
+</div>
 
-15. How to update the game version
-- Fully automatic updates (recommended)
-- Semi-automatic updates
-- Semi-manual updates
-- Manual updates
-- Pure manual updates
+<div class="box">
+    🏆 <strong>Unlock Achievements (Save Locally):</strong>  
+    Unlock in‑game achievements, saved locally (not synced to your Steam profile).
+</div>
 
-16. About achievements
-- Steam official achievement files (UserGameStatsSchema_{appid}.bin)
-- SteamTools achievement files (UserStats_{appid}_{user_friend_code}.bin)
-- Achievement modifier: SteamAchievementManager (SAM) or Watt Toolkit
+<div class="box">
+    👪 <strong>Unlock home monitoring and PIN access:</strong>  
+    Gain access to Steam’s home monitoring and PIN system to control what family members can access.
+</div>
 
-17. Denuvo Crypto Game Guide (D Crypto)
-Three types of encryption.
-Common error codes: 85500000, 85500005, 85500006
-Authorization steps using SteamTools.
+<div class="box">
+    ⛔ <strong>Bypassing family sharing restrictions:</strong>  
+    Break through limitations of family sharing and access shared content without restrictions.
+</div>
 
-18. How to Download Workshop Files
+<div class="box">
+    🌍 <strong>Unlock region‑locked games:</strong>  
+    Access games that are restricted or unavailable in your region.
+</div>
+<div class="section-title">🧰 7. Preparations Before Use</div>
 
-19. How to play online on unsupported games
-- online-fix.me Online Patch (Highly Recommended)
-- Goldberg Steam emulator
+<div class="step-box">
+    <strong>1.</strong> Use the latest version of the Steam client.
+</div>
 
-20. How to unlock DLC
-Two types of DLC.
-Methods: Automatic, Semi-automatic, Manual.
+<div class="step-box">
+    <strong>2.</strong> Avoid running SteamTools as administrator  
+    <em>(this will prevent you from dragging files in).</em>
+</div>
 
-SteamTools FAQ
-- Safety-related
-- Download and Installation
-- Startup and Operation
-- Multiplayer (online) related
-- Operation-related
+<div class="step-box">
+    <strong>3.</strong> Add SteamTools to the whitelist of Windows Defender and antivirus.
+</div>
 
-Others
-Practical tool recommendations: Watt Toolkit (Steam++)
+<div class="step-box">
+    <strong>4.</strong> Make sure the Steam version is stable, not beta.
+</div>
 
-Recommended Game Assistance Websites: Fengling Yueying, CrackWatcher, NexusMods, FearLess Cheat Engine.
+<div class="step-box">
+    <strong>5.</strong> In Steam launch options, enable:<br>
+    ✔ Unlock mode<br>
+    ✔ Always unlock<br>
+    ✔ Start with Steam
+</div>
+
+<div class="step-box">
+    <strong>6.</strong> Disable:<br>
+    ❌ Disable game updates
+</div>
+
+<div class="sub-title">🔎 7.1 Check SteamTools Status</div>
+
+<div class="box">
+    ✔ <strong>Unlock Mode (Brightest icon):</strong>  
+    Indicates SteamTools is in unlock mode and the game unlock function is activated.<br>
+    <em>(Insert your icon here)</em>
+</div>
+
+<div class="box">
+    ✔ <strong>Normal Mode (Medium brightness icon):</strong>  
+    Indicates Steam is in a normal state (unlocked) and does not interfere with normal Steam operation.<br>
+    <em>(Insert your icon here)</em>
+</div>
+
+<div class="box">
+    ✔ <strong>Steam Not Running Mode (Dark icon):</strong>  
+    Indicates Steam is not running.<br>
+    <em>(Insert your icon here)</em>
+</div>
+
+<div class="box">
+    If the above methods do not work, please try reinstalling SteamTools.<br>
+    Get the latest updates from: <strong>SteamTools official announcements</strong>.
+</div>
+<div class="section-title">🎮 8. Methods for Unlocking and Downloading Content in Games</div>
+
+<div class="box">
+    <strong>Recommended order (from simplest to most traditional):</strong><br><br>
+    ✔ Fully automatic<br>
+    ✔ Semi‑automatic (outdated)<br>
+    ✔ Semi‑automatic (personal recommendation)<br>
+    ✔ Semi‑manual<br>
+    ✔ Manual (not recommended)<br>
+    ✔ Pure manual (not recommended)
+</div>
+
+<!-- ======================= FULLY AUTOMATIC ======================= -->
+
+<div class="sub-title">⚡ Fully Automatic (No Longer Active)</div>
+<div class="box">
+    Just enter your AppID — no need to manually look up Lua or Manifest files.<br><br>
+    <strong>Cloud Unlock (official paid service):</strong><br>
+    Automatically updates Manifest files while online, always up to date.  
+    Recommended for users who appreciate convenience.
+</div>
+
+<!-- ======================= SEMI-FULLY AUTOMATIC ======================= -->
+
+<div class="sub-title">🔧 Semi‑Fully Automatic</div>
+<div class="box">
+    Rely on third‑party tools (list downloaders):<br><br>
+    • <strong>SteamManifestCache</strong> by pjy612<br>
+    • <strong>OneKey</strong> by ikunshare (last free version v1.5.1)
+</div>
+
+<!-- ======================= SEMI-AUTOMATIC ======================= -->
+
+<div class="sub-title">🔄 Semi‑Automatic</div>
+<div class="box">
+    Download ready‑made Lua/ST files and their corresponding Manifest files  
+    from forums or communities. Drag them into the floating window, then restart Steam.<br><br>
+    • <strong>SteamLua</strong> — Official SteamTools production (paid fees apply)<br>
+    • <strong>3A Forum Game Sharing</strong>
+</div>
+
+<!-- ======================= SEMI-MANUAL ======================= -->
+
+<div class="sub-title">🛠️ Semi‑Manual</div>
+<div class="box">
+    You can drag and drop the AppID or link it to the floating window to unlock it.  
+    Note that SteamTools only unlocks features — it does <strong>not</strong> download content.<br><br>
+
+    <strong>Common ways to obtain original game files:</strong><br><br>
+
+    🔑 Download with shared accounts (offline accounts).<br>
+    🧑‍🤝‍🧑 Download using a trusted friend's account.<br>
+    🛒 Refund after purchase: Request a refund within 2 hours of playtime and 14 days after purchasing → downloads →  
+    <em>(Note: Frequent refunds may result in a warning about account suspension risk)</em><br>
+    👪 Family sharing.<br>
+    📡 After downloading from the official source, place it in the corresponding Steam library folder.
+</div>
+
+<!-- ======================= MANUAL & PURE MANUAL ======================= -->
+
+<div class="sub-title">📜 Manual & Pure Manual</div>
+<div class="box">
+    Manually write Lua and obtain keys, or simply add keys manually in <code>config.vdf</code>.<br><br>
+
+    <strong>Lua encoding instructions:</strong><br>
+    • Manually transfer the key<br>
+    • Compare the format<br>
+    • Copy the structure<br>
+    • Infer from examples<br>
+    • “Copy homework” style approach<br><br>
+
+    <strong>⚠️ Attention!</strong><br>
+    <strong>Please close Steam before proceeding!</strong><br>
+    <strong>Please close Steam before proceeding!</strong><br>
+    <strong>Please close Steam before proceeding!</strong>
+</div>
+<div class="section-title">📚 9. Lua & Manifest File Sources</div>
+
+<div class="box">
+    <strong>Recommended acquisition platforms:</strong><br><br>
+    ✔ 3A Official Forum — Game Sharing Section<br>
+    🌱 Caiwan Community<br>
+    📦 ManifestHub — GitHub (Open Source Manifest Library)
+</div>
+
+<!-- ======================= FIXED LIST CONFIG ======================= -->
+
+<div class="section-title">📝 10. Fixed List Configuration Explanation</div>
+<div class="box">
+    <strong>Note:</strong> No longer valid in the new version of SteamTools.<br><br>
+
+    <code>setManifest(DepotID, "ManifestID")</code><br><br>
+
+    SteamTools locks the checklist version.  
+    During updates, you must modify the ManifestID in the Lua script and drag both the script  
+    and the new Manifest file into the floating window.<br><br>
+
+    This configuration is more stable and prevents the  
+    <em>"Content configuration not available"</em> error.
+</div>
+
+<!-- ======================= EXTRACTION TOOLS ======================= -->
+
+<div class="section-title">🧰 11. Lua & Manifest Extraction Tools</div>
+<div class="box">
+    To share or extract, you can use:<br><br>
+    • Steam Library Plugin Extraction Tool<br>
+    • List Extractor 1.1 by B‑I‑A‑O
+</div>
+
+<!-- ======================= DISABLE UNLOCK ======================= -->
+
+<div class="section-title">🚫 12. How to Disable Game Unlock & Download Functions</div>
+
+<div class="step-box">
+    <strong>Method 1:</strong> Hold down <code>Ctrl</code> and drag the corresponding AppID / store link  
+    or Lua file into the floating window, then restart Steam.
+</div>
+
+<div class="step-box">
+    <strong>Method 2:</strong> Go to the folder and manually delete the relevant AppID plugin files:<br>
+    <code>Drive:\Steam\config\stplug-in</code>
+</div>
+
+<!-- ======================= DELETE MANIFEST FILES ======================= -->
+
+<div class="section-title">🗑️ 13. Methods for Deleting Manifest Files</div>
+<div class="box">
+    Manifest files are usually stored in:<br>
+    <code>Steam\config\depotcache</code><br>
+    <code>Steam\depotcache</code><br><br>
+
+    When uninstalling a game, the corresponding manifest is automatically cleaned.  
+    <strong>Do not delete manually unless necessary</strong>, as this may cause update errors.
+</div>
+
+<!-- ======================= CHECK GAME VERSION ======================= -->
+
+<div class="section-title">🎮 14. Check the Current Game Version</div>
+
+<div class="box">
+    When unlocking a game using a manifest file, it is very important to know the current version status.<br><br>
+    By comparing <strong>Manifest ID</strong> and <strong>Build ID</strong>, you can determine whether your local game data is up to date.
+</div>
+
+<div class="sub-title">🔍 What Are Manifest ID and Build ID?</div>
+<div class="box">
+    <strong>Manifest ID:</strong> Represents the detailed version of the game file.<br>
+    <strong>Build ID:</strong> Represents the build version of the game and indicates update status.
+</div>
+
+<div class="sub-title">🛠️ How to View Build ID Version Information</div>
+<div class="box">
+    <strong>Using SteamDB.info:</strong><br><br>
+    1. Visit SteamDB.info<br>
+    2. Enter the game name in the search bar<br>
+    3. Click the “Patches” button<br><br>
+
+    The latest Build ID will be displayed at the top of the list.<br><br>
+
+    ✔ <strong>Verify if the version is up to date:</strong><br>
+    Compare your local Manifest ID / Build ID with SteamDB records.<br><br>
+
+    • If they match → You have the latest version.<br>
+    • If not → Obtain the latest manifest or wait for official updates.
+</div>
+
+<div class="sub-title">🧭 How to Check Game Versions Using Manifest ID</div>
+<div class="box">
+    Each time a game updates, the Manifest ID changes.  
+    This makes it an important identifier for version checks.
+</div>
+
+<div class="sub-title">📁 Find the Manifest ID Locally</div>
+<div class="box">
+    Manifest files are stored here:<br>
+    <code>C:\Program Files (x86)\Steam\depotcache</code><br><br>
+
+    <strong>File naming format:</strong><br>
+    <code>{depotid}_{manifestId}.manifest</code><br><br>
+
+    <strong>Example:</strong><br>
+    <code>413151_1364246008775303529.manifest</code><br><br>
+
+    • <strong>413151</strong> = Depot ID<br>
+    • <strong>1364246008775303529</strong> = Manifest ID
+</div>
+
+<div class="sub-title">♻️ Check Manifest Information with SteamDB</div>
+<div class="box">
+    <strong>(1) Go to the game details page:</strong><br>
+    Visit SteamDB → Search for the game → Open the details page.<br><br>
+
+    <strong>(2) View the Depots list:</strong><br>
+    Click “Depots” in the top navigation bar.<br><br>
+
+    <strong>(3) View Manifest information:</strong><br>
+    On the depot page, click <strong>public</strong> under Branches.<br><br>
+
+    You will find information like:<br><br>
+
+    • <strong>Depot ID:</strong> 3764201<br>
+    • <strong>Last updated:</strong> 1771577572 (Timestamp → Feb 20, 2026)<br>
+    • <strong>Latest Manifest ID:</strong> 5691830764668778509<br><br>
+
+    Compare this Manifest ID with your local file to determine if it is the latest version.
+</div>
+
+<div class="sub-title">🎯 How to Choose the Right Depot</div>
+<div class="box">
+    When multiple depots exist, prioritize using:<br><br>
+
+    • Sort by game size → The largest depot is usually the main program.<br>
+    • Prioritize keywords: <code>common</code>, <code>client</code>, <code>Content</code>, <code>Windows</code><br><br>
+
+    If there is only one depot → No filtering needed.
+</div>
+<div class="section-title">🔄 15. How to Update the Game Version</div>
+
+<div class="sub-title">⚙️ Fully Automatic Updates (Recommended)</div>
+<div class="box">
+    The new version of SteamTools automatically downloads the latest Manifest files,  
+    keeping your game version up to date without any manual intervention.
+</div>
+
+<div class="sub-title">🧩 Fully Automatic & Semi‑Automatic Updates</div>
+<div class="box">
+    The update process depends on whether the tool's inventory is complete.<br><br>
+    • If the latest version exists in the library → The update completes automatically.<br>
+    • If not → Manual update is required.
+</div>
+
+<div class="sub-title">📁 Semi‑Automatic Updates</div>
+<div class="box">
+    📝 Drag the new Lua file and its corresponding Manifest file into the SteamTools floating window.<br><br>
+    <strong>⚠️ Note:</strong> Lua files must match the Manifest exactly, otherwise they will not be recognized.<br><br>
+    If needed, you can manually modify the Manifest ID in the Lua file using Notepad.
+</div>
+
+<div class="sub-title">♻️ Semi‑Manual Updates</div>
+<div class="box">
+    Suitable for resources obtained from:<br><br>
+    • Offline accounts<br>
+    • Friend accounts<br>
+    • Third‑party services<br>
+    • Family sharing<br><br>
+    ✔ Any game file downloaded through Steam’s official servers is considered pure version.  
+    After importing, you can use the matching Manifest file to complete the update.
+</div>
+
+<div class="sub-title">✏️ Manual Updates</div>
+<div class="box">
+    🔸 Drag the new Manifest file into the SteamTools floating window.<br>
+    ✍️ Open the Lua file and manually modify the Manifest ID using Notepad.<br><br>
+    ✔ After modification, drag the Lua file into the floating window to complete the update.
+</div>
+
+<div class="sub-title">📂 Pure Manual Updates</div>
+<div class="box">
+    🔸 Directly copy the Manifest file to:<br>
+    <code>C:\Program Files (x86)\Steam\depotcache</code><br><br>
+    ✔ You do not need to delete old files.  
+    Old and new versions can coexist — Steam will automatically delete outdated files  
+    after updating the game through the old manifest.
+</div>
+
+<!-- ======================= ACHIEVEMENTS ======================= -->
+
+<div class="section-title">🏆 16. About Achievements</div>
+
+<div class="sub-title">📄 Steam Official Achievement File</div>
+<div class="box">
+    <strong>File format:</strong> <code>UserGameStatsSchema_{appid}.bin</code><br><br>
+
+    <strong>AppID:</strong> Unique identifier for each Steam game.<br>
+    <strong>Content:</strong> Contains basic achievement information (names, descriptions, requirements).  
+    Does <em>not</em> store actual progress.<br><br>
+
+    <strong>Storage path:</strong><br>
+    <code>Steam\appcache\stats</code><br><br>
+
+    <strong>Purpose:</strong><br>
+    • Achievement data recording<br>
+    • Achievement management and display in Steam client
+</div>
+
+<div class="sub-title">📄 SteamTools Achievement Files</div>
+<div class="box">
+    <strong>File format:</strong> <code>UserStats_{appid}_{user_friend_code}.bin</code><br><br>
+
+    <strong>AppID:</strong> Unique identifier for each game.<br>
+    <strong>User friend code:</strong> Unique identifier for your Steam account.<br><br>
+
+    <strong>Content:</strong> Records achievement progress, unlocked achievements, and game progress.<br>
+    <strong>Storage:</strong> Exported by SteamTools and saved in the specified directory.<br><br>
+
+    <strong>Purpose:</strong><br>
+    • Achievement progress tracking<br>
+    • Sharing progress across accounts<br><br>
+
+    ⚠️ <strong>Update (April 9, 2025):</strong><br>
+    SteamTools now includes auto‑achievement unlocking.  
+    Once the game is in the library, achievements will attempt to unlock automatically.  
+    Manual achievement files are only needed when SteamTools has not yet included new achievements.
+</div>
+
+<div class="sub-title">🛠️ Use the Achievement Modifier to Reset Achievements</div>
+<div class="box">
+    <strong>Function:</strong><br>
+    The Achievement Modifier allows manual editing of achievement status, including resetting them.<br>
+    Use with caution to avoid misoperation or violating Steam rules.<br><br>
+
+    <strong>How to use:</strong><br>
+    • Achievement Modifier (for SteamTools achievements) — located in Caiwan community Steam library.<br>
+    • You can reset achievements even if they were imported via SteamTools.<br><br>
+
+    <strong>Tool download links:</strong><br>
+    • Achievement Modifier #1 (SAM)<br>
+    • Achievement Modifier #2 (Watt Toolkit)
+</div>
+<div class="section-title">🔐 17. Denuvo Crypto Game Guide (D Crypto)</div>
+
+<div class="sub-title">📚 Three Types of Encryption</div>
+<div class="box">
+    <strong>Steam‑D Encryption:</strong> Digital encryption implemented through the Steam platform.<br><br>
+    <strong>Ubisoft‑D Encryption:</strong> Requires Ubisoft account authorization.<br><br>
+    <strong>Origin EA‑D Encryption:</strong> Encryption tied to the EA Origin platform.
+</div>
+
+<div class="sub-title">❓ What Is a Denuvo Crypto Game?</div>
+<div class="box">
+    Denuvo Crypto games have activation limits:<br><br>
+    • Each account can activate the game <strong>5 times per day</strong>.<br>
+    • Each online launch consumes one activation.<br>
+    • Each activation starts a <strong>24‑hour cooldown</strong>.<br><br>
+    If all 5 activations are used → <strong>Error 006</strong> appears.<br><br>
+    📌 Once activated, you can continue playing offline as long as you don’t change your PC or system.
+</div>
+
+<div class="sub-title">⚠️ D Encryption Precautions</div>
+<div class="box">
+    ⛔ <strong>No internet café support:</strong> Every restart counts as a new device → authorization invalid.<br><br>
+    💻 <strong>Do not reinstall system, drivers, or hardware:</strong> May invalidate authorization.<br><br>
+    📴 <strong>Offline usage tip:</strong> Use “Account Switch” tool to avoid accidental online activation.
+</div>
+
+<div class="sub-title">🧠 Newbie Reminder (Common Error Codes)</div>
+<div class="box">
+    <strong>855000000:</strong> No authorization at all.<br>
+    <strong>85500005:</strong> Authorization expired (valid for 30 minutes).<br>
+    <strong>85500006:</strong> All 5 activations used → wait for cooldown.
+</div>
+
+<div class="sub-title">🔑 D Encryption Authorization Steps (Using SteamTools)</div>
+<div class="box">
+    1. Log into the Steam account that owns the game.<br>
+    2. Start the game once.<br>
+    3. When the game screen appears → authorization successful.<br>
+    4. Exit the game.<br>
+    5. Delete the temporary account and switch back to your main account.<br><br>
+    ✔ Licenses become bound to your device and account.<br><br>
+    ⚠️ May not support newer D encryption (e.g., RE9).
+</div>
+
+<!-- ======================= WORKSHOP DOWNLOAD ======================= -->
+
+<div class="section-title">🛠️ 18. How to Download Workshop Files</div>
+
+<div class="sub-title">Method 1: SteamTools</div>
+<div class="box">
+    Subscribe and download Workshop mods directly from your Steam account.  
+    No extra steps — Steam syncs everything automatically.
+</div>
+
+<div class="sub-title">Method 2: 🔑 Use a Shared Account</div>
+<div class="box">
+    Use an account that owns the game to subscribe and download Workshop mods.  
+    After downloading, switch back to your main account and continue using the content.
+</div>
+
+<!-- ======================= ONLINE PLAY ======================= -->
+
+<div class="section-title">🌐 19. How to Play Online on Unsupported Games</div>
+
+<div class="box">
+    Most games cannot access official online servers unless they use online patches.  
+    Some games (Forza Horizon 4/5, It Takes Two, Escape) support official online play.  
+    For others, use the following methods:
+</div>
+
+<div class="sub-title">⭐ online-fix.me (Highly Recommended)</div>
+<div class="box">
+    • Register on the website and download the patch.<br>
+    • Download the file named <strong>Fix Repair</strong>.<br>
+    • Extraction password: <strong>online-fix.me</strong><br><br>
+
+    <strong>Installation:</strong><br>
+    1. Extract files to the game root directory.<br>
+    2. Log in to Steam.<br>
+    3. Invite Steam friends (no matchmaking).<br><br>
+
+    <strong>Requirement:</strong> All players must install the patch.
+</div>
+
+<div class="sub-title">⚙️ Goldberg Steam Emulator (Not Recommended)</div>
+<div class="box">
+    <strong>Backup first:</strong><br>
+    • <code>steam_api64.dll</code><br>
+    • <code>steam_api.dll</code><br><br>
+
+    <strong>Installation:</strong><br>
+    • Download and extract Goldberg.<br>
+    • Replace DLL files depending on engine:<br><br>
+
+    <strong>Scenario 1:</strong> Non‑Unity engine → DLL in <code>GameName_Data/plugin/</code><br>
+    <strong>Scenario 2:</strong> DLL in installation directory → replace directly.<br><br>
+
+    <strong>If still not working:</strong><br>
+    • Generate <code>steam_interfaces.txt</code> using <code>generate_interfaces_file.exe</code><br>
+    • Place file in game root directory.<br><br>
+
+    <strong>Online setup:</strong><br>
+    • Configure Goldberg settings identically with friends.<br>
+    • Create Virtual LAN (Zerotier).<br>
+    • Enter online mode.<br><br>
+
+    <strong>Language settings:</strong><br>
+    Edit:<br>
+    • <code>account_name.txt</code><br>
+    • <code>listen_port.txt</code><br>
+    • <code>user_steam_id.txt</code><br>
+    • <code>language.txt → schinese</code><br><br>
+
+    🔗 Official download: <strong>mr_goldberg.gitlab.io/goldberg_emulator/</strong>
+</div>
+<div class="section-title">🔓 20. How to Unlock DLC</div>
+
+<div class="sub-title">⚙️ Automatic</div>
+<div class="box">
+    Using third‑party in‑store tools to import DLC depends on the completeness of the tool database.  
+    If the database is complete, it can automatically unlock most DLC.
+</div>
+
+<div class="sub-title">🤖 Semi‑Automatic (Personal Recommendation)</div>
+<div class="box">
+    Use the Lua & Manifest Generator to extract and share Lua.  
+    This method automatically unlocks DLC included in the game but not yet purchased,  
+    and writes them into Lua scripts.<br><br>
+
+    DLC not included in the base game and not purchased will not be unlocked.<br><br>
+
+    ✔ Simply drag and drop the shared Lua file into the SteamTools floating window.
+</div>
+
+<div class="sub-title">💻 Manual</div>
+<div class="box">
+    Drag and drop the DLCID into the SteamTools floating window to unlock the DLC.<br><br>
+    ⚠️ DLC containing Depot requires a personal key — otherwise, do not unlock it.
+</div>
+
+<div class="sub-title">💻 Manual Third‑Party Patches</div>
+<div class="box">
+    Use third‑party patches like <strong>CreamAPI</strong> to unlock DLC by placing them in the game directory.<br><br>
+    Recommended for DLCs that contain Depot but have very small or zero capacity.<br>
+    You can skip downloading the manifest list.
+</div>
+
+<div class="sub-title">🎮 Types of DLC</div>
+<div class="box">
+    <strong>1. Base game includes additional DLC:</strong><br>
+    → Drag your AppID into the SteamTools floating window to unlock.<br><br>
+
+    <strong>2. Base game and DLC are separate:</strong><br>
+    → Requires manifest file + decryption key.<br>
+    → Drag DLC AppID + Depot ID into the floating window.
+</div>
+
+<div class="sub-title">📊 How to Distinguish DLC Types</div>
+<div class="box">
+    <strong>Case 1:</strong> DLC AppID appears in Depots section on SteamDB.<br>
+    → Base game does NOT include DLC.<br>
+    → Requires manifest + key.<br><br>
+
+    <strong>Case 2:</strong> DLC AppID does NOT appear in Depots list.<br>
+    → Check DLC’s standalone SteamDB page.<br><br>
+
+    • If Depots directory exists → DLC is independent → requires manifest + key.<br>
+    • If no Depots directory → DLC files already exist locally → drag DLC AppID to unlock.
+</div>
+
+<div class="box">
+    💡 <strong>Reminder:</strong><br>
+    For separate DLC, ensure:<br>
+    • DLC Manifest file is in <code>depotcache</code><br>
+    • DLC decryption key is in <code>config.vdf</code><br><br>
+    Missing either causes <strong>"Download still encrypted"</strong> errors.
+</div>
+
+<!-- ======================= FAQ ======================= -->
+
+<div class="section-title">❓ SteamTools FAQ</div>
+
+<div class="sub-title">🛡️ Safety‑Related</div>
+<div class="box">
+    <strong>Q:</strong> Can adding a game to the library cause a ban?<br>
+    <strong>A:</strong> If you are worried, do not take the risk.  
+    If you continue, be prepared for consequences.<br><br>
+
+    <strong>Q:</strong> What happens if I clear Steam download cache?<br>
+    <strong>A:</strong> Clears keys, inventory cache, download cache, and may erase achievement progress.  
+    Not recommended unless necessary.
+</div>
+
+<div class="sub-title">📦 Download & Installation</div>
+<div class="box">
+    <strong>Q:</strong> Where is the game downloaded from?<br>
+    <strong>A:</strong> Steam’s official servers.<br><br>
+
+    <strong>Q:</strong> Download size shows 0B?<br>
+    <strong>A:</strong> Uncheck “Disable Game Content Updates”.<br><br>
+
+    <strong>Q:</strong> Download errors?<br>
+    <strong>A:</strong> Lua config error or expired Manifest.  
+    Download latest version and drag again.<br><br>
+
+    <strong>Q:</strong> “Content still encrypted”?<br>
+    <strong>A:</strong> Uncheck all DLCs and update Lua + Manifest.  
+    Clearing download cache may erase keys.
+</div>
+
+<div class="sub-title">🚀 Startup & Operation</div>
+<div class="box">
+    <strong>Q:</strong> Error 6:0000065432 / error 3 / error 54?<br>
+    <strong>A:</strong> Use Steamless to generate a peeled EXE and replace the original.<br><br>
+
+    <strong>Q:</strong> Game starts slowly?<br>
+    <strong>A:</strong> Disable “Enable Shader Pre‑Caching” in Steam settings.<br><br>
+
+    <strong>Q:</strong> Achievement not popping?<br>
+    <strong>A:</strong> Some games have delayed achievement sync.  
+    Be patient — Steam will sync automatically.
+</div>
+
+<div class="sub-title">🎮 Multiplayer</div>
+<div class="box">
+    <strong>Q:</strong> Can SteamTools games be played online?<br>
+    <strong>A:</strong> 99% cannot. Only a few support official online play.<br><br>
+
+    <strong>Q:</strong> Game always offline?<br>
+    <strong>A:</strong> SteamTools imports cannot connect to Steam servers.  
+    Use third‑party patches like online‑fix.me.<br><br>
+
+    <strong>Q:</strong> Can EA / Rockstar / Ubisoft games run?<br>
+    <strong>A:</strong> These require third‑party launchers.  
+    Use genuine accounts or no‑verification patches.
+</div>
+
+<div class="sub-title">🧩 Operation‑Related</div>
+<div class="box">
+    <strong>Q:</strong> Cannot drag Lua/Manifest into floating window?<br>
+    <strong>A:</strong> Do not run SteamTools as admin.  
+    Avoid Steam Beta client — use official version.
+</div>
+
+<div class="sub-title">🧰 Practical Tools</div>
+<div class="box">
+    <strong>Watt Toolkit (Steam++)</strong><br>
+    Open‑source, cross‑platform Steam toolbox.<br>
+    🔗 <strong>steampp.net</strong><br><br>
+
+    <strong>Recommended Websites:</strong><br>
+    • Fengling Yueying — trainer series<br>
+    • CrackWatcher — encryption & crack tracking<br>
+    • NexusMods — world’s largest mod site<br>
+    • FearLess Cheat Engine — CE forum
+</div>
+<div class="section-title">📘 21. Final Notes & Credits</div>
+
+<div class="box">
+    This SteamTools Guide was compiled, organized, and formatted to provide a complete  
+    reference for unlocking, downloading, managing, and troubleshooting Steam content  
+    using SteamTools and related utilities.<br><br>
+
+    All sections were carefully structured to ensure clarity, accessibility,  
+    and ease of use for both beginners and advanced users.
+</div>
+
+<div class="sub-title">🧩 Special Thanks</div>
+<div class="box">
+    • SteamTools community<br>
+    • Caiwan community<br>
+    • 3A Forum contributors<br>
+    • ManifestHub maintainers<br>
+    • All users who share Lua, Manifest, and technical knowledge
+</div>
+
+<div class="sub-title">🛠️ Document Editor</div>
+<div class="box">
+    Guide compiled and formatted by:<br>
+    <strong>Jahdread</strong><br><br>
+    Thank you for your dedication and effort in creating a complete,  
+    beautifully structured technical guide.
+</div>
+
+<div class="sub-title">🌐 Version</div>
+<div class="box">
+    SteamTools Guide — Updated July 2026<br>
+    Compatible with the latest SteamTools release and Steam client version.
+</div>
